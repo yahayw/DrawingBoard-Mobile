@@ -13,9 +13,9 @@
 }
 .btns {
 	position: absolute;
-	top: 50%;
-	left: 0.1rem;
-	transform: translateY(-50%);
+	top: 0.1rem;
+	left: 50%;
+	transform: translateX(-50%);
 }
 .btns>button {
 	border: 0;

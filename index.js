@@ -17,31 +17,31 @@ let newPosition = {"x":undefined,"y":undefined};
 let isDown = false; 
 let isPainting; 
 let isEraser = false;
-canvEle.ontouchstart = function(e){
-	setCoordinate(oldPosition,e)
+canvEle.addEventListener("touchstart",function(e){
+	setCoordinate(oldPosition,e.touches[0])
     isDown = true; 
     isPainting = true;	
-}
-canvEle.ontouchmove = function(e){
+},false);
+canvEle.addEventListener("touchmove",function(e){
 	if(isDown){
 		if(isPainting){
 			if(isEraser){
-				ctx.clearRect(e.clientX-5,e.clientY-5,10,10);
+				ctx.clearRect(e.touches[0].clientX-5,e.touches[0].clientY-5,10,10);
 			}else{
-				setCoordinate(newPosition,e);
+				setCoordinate(newPosition,e.touches[0]);
 				drawLine(newPosition.x,newPosition.y,oldPosition.x,oldPosition.y); 
-				setCoordinate(oldPosition,e);
+				setCoordinate(oldPosition,e.touches[0]);
 			}
 			
 		}
 	}	
-}
-canvEle.ontouchend = function(e){
+})
+canvEle.addEventListener("touchend",function(e){
 	isPainting = false; 
 	isEraser = false;
 	oldPosition.x = undefined;
 	oldPosition.y = undefined;
-}
+})
 
 clearBtn.onclick = function(){
 	ctx.clearRect(0,0,canvEle.width,canvEle.height);	
