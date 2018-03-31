@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>在线画吧（移动端）</title>
+	<link rel="stylesheet" href="./index.css">
+</head>
+<body>
+	<div class="page">
+		<canvas id="canvas"></canvas>
+		<div class="btns">
+			<button class="eraser">
+				<!-- 橡皮擦 -->
+				<svg>
+					<use xlink:href="#icon-eraser"></use>
+				</svg>
+			</button>
+			<br>
+			<button class="clear">
+				<!-- 重画 -->
+				<svg>
+					<use xlink:href="#icon-custom-clear"></use>
+				</svg>
+			</button>
+		</div>	
+	</div>	
+	<script src="//at.alicdn.com/t/font_612174_u8du9fymbxsqncdi.js"></script>
+	<script src="./index.js"></script>
+</body>
+</html>
