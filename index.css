@@ -14,7 +14,7 @@
 .btns {
 	position: absolute;
 	top: 50%;
-	left: 1rem;
+	left: 0.1rem;
 	transform: translateY(-50%);
 }
 .btns>button {
@@ -23,7 +23,7 @@
 	cursor: pointer;
 	border-radius: 10%;
 	display: inline-block;
-	width: 3rem;
+	width: 4rem;
 	box-shadow: 0 2px 7px #FCBC5E;
 	outline: none;
 }
@@ -33,7 +33,7 @@
 	background: #FFFFFF;
 }
 .btns svg {
-	width: 3vw;
-	height: 3vw;
-	padding: 0.3vw ;
+	width: 3rem;
+	height: 3rem;
+	padding: 3rem ;
 }
