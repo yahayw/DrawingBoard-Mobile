@@ -17,12 +17,12 @@ let newPosition = {"x":undefined,"y":undefined};
 let isDown = false; 
 let isPainting; 
 let isEraser = false;
-canvEle.onmousedown = function(e){
+canvEle.ontouchstart = function(e){
 	setCoordinate(oldPosition,e)
     isDown = true; 
     isPainting = true;	
 }
-canvEle.onmousemove = function(e){
+canvEle.ontouchmove = function(e){
 	if(isDown){
 		if(isPainting){
 			if(isEraser){
@@ -36,7 +36,7 @@ canvEle.onmousemove = function(e){
 		}
 	}	
 }
-canvEle.onmouseup = function(e){
+canvEle.ontouchend = function(e){
 	isPainting = false; 
 	isEraser = false;
 	oldPosition.x = undefined;
