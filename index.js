@@ -43,13 +43,13 @@ canvEle.addEventListener("touchend",function(e){
 	oldPosition.y = undefined;
 })
 
-clearBtn.onclick = function(){
-	ctx.clearRect(0,0,canvEle.width,canvEle.height);	
-}
+clearBtn.addEventListener("touchstart",function(){
+	ctx.clearRect(0,0,canvEle.width,canvEle.height);		
+})
 
-eraserBtn.onclick = function(){
-	isEraser = !isEraser;
-}
+eraserBtn.addEventListener("touchstart",function(){
+	isEraser = !isEraser;	
+})
 function drawLine(x1,y1,x0,y0){
 	ctx.beginPath();
 	ctx.moveTo(x0,y0);
